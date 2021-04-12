@@ -1,0 +1,25 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+      "lint": "eslint \"src/**/*.{js.jsx}\" --quiet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ColadaFF/semillero-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ColadaFF/semillero-react/issues"
+  },
+  "homepage": "https://github.com/ColadaFF/semillero-react#readme",
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.1.0",
+    "prettier": "^2.2.1"
+  }
+}
