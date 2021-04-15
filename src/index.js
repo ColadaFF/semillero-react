@@ -1,13 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import ProductList from "./components/products/list";
+import Router from "./router";
+
+import "@awsui/global-styles/index.css";
 
 function App() {
-  return (
-    <div>
-      <ProductList />
-    </div>
-  );
+  return <Router />;
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));
