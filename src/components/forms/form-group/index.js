@@ -1,10 +1,6 @@
 import React from "react";
 
 const FormGroup = ({ label, id, type, helpText, value, onChange }) => {
-  function handleChange(event) {
-    onChange(event.target.value);
-  }
-
   return (
     <div className="mb-3">
       <label htmlFor={id} className="form-label">
@@ -16,7 +12,7 @@ const FormGroup = ({ label, id, type, helpText, value, onChange }) => {
         id={id}
         aria-describedby={`${id}-help`}
         value={value}
-        onChange={handleChange}
+        onChange={onChange}
       />
       {helpText !== undefined ? (
         <div id={`${id}-help`} className="form-text">

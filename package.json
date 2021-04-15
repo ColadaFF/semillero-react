@@ -33,6 +33,7 @@
     "@awsui/components-react": "^3.0.106",
     "@awsui/global-styles": "^1.0.7",
     "bootstrap": "^5.0.0-beta3",
+    "formik": "^2.2.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0"

@@ -1,14 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ProductDashboard from "../components/products/dashboard";
-import ProductForm from "../components/products/form";
+import CreateProduct from "../components/products/form/create-form";
+import EditProduct from "../components/products/form/edit-form";
 import ProductDetails from "../components/products/details";
-
-function empty() {
-  return null;
-}
-
-const ProductEditForm = empty;
 
 function AppRouter() {
   return (
@@ -18,13 +13,13 @@ function AppRouter() {
           <ProductDashboard />
         </Route>
         <Route path="/create">
-          <ProductForm />
+          <CreateProduct />
         </Route>
         <Route path="/:id/details">
           <ProductDetails />
         </Route>
         <Route path="/:id/edit">
-          <ProductEditForm />
+          <EditProduct />
         </Route>
       </Switch>
     </Router>
