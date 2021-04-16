@@ -1,6 +1,19 @@
 import React from "react";
 
-const FormGroup = ({ label, id, type, helpText, value, onChange }) => {
+const FormGroup = ({
+  label,
+  id,
+  type,
+  helpText,
+  value,
+  onChange,
+  onBlur,
+  error,
+  touched,
+}) => {
+  const hasError = error && touched;
+  const validateClass = error ? "is-invalid" : "is-valid";
+  const inputClass = touched ? validateClass : "";
   return (
     <div className="mb-3">
       <label htmlFor={id} className="form-label">
@@ -8,13 +21,15 @@ const FormGroup = ({ label, id, type, helpText, value, onChange }) => {
       </label>
       <input
         type={type}
-        className="form-control"
+        className={`form-control ${inputClass}`}
         id={id}
         aria-describedby={`${id}-help`}
         value={value}
         onChange={onChange}
+        onBlur={onBlur}
       />
-      {helpText !== undefined ? (
+      {hasError ? <div className="invalid-feedback">{error}</div> : null}
+      {helpText !== undefined && !hasError ? (
         <div id={`${id}-help`} className="form-text">
           {helpText}
         </div>
